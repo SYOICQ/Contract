@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客户编号:"
+            android:layout_gravity="center_vertical"/>
+        <EditText
+            android:layout_gravity="center_vertical"
+            android:id="@+id/data_for_search"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:layout_gravity="center_vertical"
+            android:id="@+id/btn_search_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search"/>
+
+        <ImageButton
+            android:id="@+id/btn_add_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/add_customer" />
+    </LinearLayout>
+    <View
+        android:layout_below="@id/top"
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"/>
+    <ProgressBar
+        android:id="@+id/query_process"
+        android:layout_below="@id/top_line"
+        android:layout_marginTop="5dp"
+        android:layout_width="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="30dp"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/cardview_shadow_start_color"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:layout_below="@id/top_line"
+        android:focusableInTouchMode="true">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+                <TableLayout
+                    app:tabMode="scrollable"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                   android:id="@+id/table1" />
+        </HorizontalScrollView>
+    </ScrollView>
+
+</RelativeLayout>

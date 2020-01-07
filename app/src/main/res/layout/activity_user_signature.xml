@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_sign_nature"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:weightSum="1">
+
+
+    <EditText
+        android:inputType="text"
+        android:id="@+id/new_signature"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:enabled="true"
+        android:gravity="top"
+        android:minLines="8"
+        android:maxLines="10"
+        android:background="@drawable/textarea"
+        android:textColor="#fff"
+        android:text="暂无个性签名"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="不要输入淫秽、广告词汇，否则一律封禁"
+        android:textSize="10dp"
+        android:layout_marginLeft="10dp"/>
+
+       <ImageButton
+           android:layout_marginTop="30dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/btn_edit_signature"
+           android:background="@drawable/sumbit"
+           android:layout_gravity="center"/>
+</LinearLayout>
